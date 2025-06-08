@@ -7,15 +7,15 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(166, 80%, 40%);
-  --first-color-alt: hsl(166, 78%, 38%);
-  --title-color: hsl(166, 95%, 15%);
-  --text-color: hsl(166, 12%, 40%);
-  --white-color: hsl(166, 100%, 99%);
-  --dark-color: hsl(166, 95%, 12%);
-  --body-color: hsl(166, 56%, 18%);
-  --body-white-color: hsl(0, 0%, 100%);
-  --body-first-color: hsl(166, 80%, 40%);
+  --first-color: white;           /* hsl(166, 80%, 40%) */
+  --first-color-alt: #24ab8f;       /* hsl(166, 78%, 38%) */
+  --title-color: black;            /* hsl(166, 95%, 15%) */
+  --text-color: #5a6762;            /* hsl(166, 12%, 40%) */
+  --white-color: #fcfffd;           /* hsl(166, 100%, 99%) */
+  --dark-color: #102f28;            /* hsl(166, 95%, 12%) */
+  --body-color: #6F4E37;            /* hsl(166, 56%, 18%) */
+  --body-white-color: #ffffff;      /* hsl(0, 0%, 100%) */
+  --body-first-color: #26b99a;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -327,26 +327,27 @@ img {
 .button {
   display: inline-flex;
   justify-content: center;
-  background-color: var(--first-color);
-  color: var(--white-color);
+  background-color: var(--body-white-color);
+  color: var(--body-color);
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: background 0.4s, box-shadow 0.4s;
 }
-
-.button:hover {
-  background-color: var(--first-color-alt);
-  box-shadow: 0 8px 24px hsla(166, 85%, 8%, 0.2);
-}
-
 .button-dark {
-  background-color: var(--dark-color);
+  background-color: var(--body-color);
 }
-
-.button-dark:hover {
-  background-color: var(--dark-color);
+.button-dark1{
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--body-white-color);
+  color: var(--body-white-color);
+  padding: 1rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: background 0.4s, box-shadow 0.4s;
 }
-
+.button-dark1{
+  background-color: var(--body-color);
+}
 /*=============== POPULAR ===============*/
 .popular {
   background-color: var(--body-white-color);
@@ -491,11 +492,11 @@ img {
 
 /*=============== PRODUCTS ===============*/
 .products {
-  background-color: var(--body-first-color);
+  background-color: var(--body-white-color);
 }
 
 .products .section__title {
-  color: var(--dark-color);
+  color: var(--title-color);
 }
 
 .products__container {
@@ -504,7 +505,7 @@ img {
 
 .products__card {
   position: relative;
-  background-color: var(--dark-color);
+  background-color: var(--body-color);
   padding: 1rem 0.5rem 1.25rem;
 }
 
@@ -518,7 +519,7 @@ img {
 .products__shape {
   width: 120px;
   height: 120px;
-  background-color: var(--first-color);
+  background-color: var(--body-color);
   border-radius: 50%;
   clip-path: inset(50% 0 0 0);
 }
@@ -673,7 +674,7 @@ img {
 
 /*=============== FOOTER ===============*/
 .footer {
-  background-color: var(--body-first-color);
+  background-color: var(--body-white-color);
   padding-block: 4rem 2rem;
 }
 
@@ -709,7 +710,7 @@ img {
 }
 
 .footer__form {
-  background-color: var(--dark-color);
+  background-color: var(--body-color);
   padding: 0.5rem;
 }
 
@@ -727,7 +728,7 @@ img {
 
 .footer__button {
   padding: 0.75rem 1.5rem;
-  color: var(--dark-color);
+  color: var(--body-white-color);
   cursor: pointer;
 }
 
